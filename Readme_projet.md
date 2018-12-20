@@ -62,20 +62,20 @@ Elle permet de voir l'historique des livres empruntés.
 #### Rendre
 Elle permet de voir l'historique des livres rendus.
 
-##CHOIX TECHNIQUE
+## CHOIX TECHNIQUE
 
-###PHP
+### PHP
 J'ai choisi le langage PHP car j'ai eu à le faire ma premiere année et ma deuxieme année de formation.
 
-###MVC
+### MVC
 J'ai choisi de faire l'architecture MVC car il offre: 
  * une conception claire et efficace grâce à la séparation des données de la vue et du contrôleur.
  * Un gain de temps de maintenance.
  
-###JAVASCRIPT
+### JAVASCRIPT
 J'ai utilisé JavaScript pour la gestion d'événement, car lorsque j'ai eu un probléme avec la gestion des événements c'est le premier langage qu'on m'a conseillé mais aussi le premier que je voyais dans mes recherches.
 
-##Accés et Test du site web
+## Accés et Test du site web
 Vous pouvez accéder au site grace a cet url: http://80.211.56.41:8010/connexion
 Pour vous connectez en tant que administrateur:
  * Pseudo: admin_root.
