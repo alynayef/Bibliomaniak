@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS livres CASCADE;
+
+
+CREATE TABLE livres
+(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+reference VARCHAR(6) NOT NULL,
+nomLivre VARCHAR(100) NOT NULL,
+nomAuteur VARCHAR(100) DEFAULT 'INCONNUE',
+datePublication DATE NOT NULL,
+disponibilite BOOL DEFAULT 1,
+constraint UC_Livre UNIQUE (reference)
+);
+
+
+Insert into livres(reference,nomLivre,nomAuteur,datePublication,disponibilite) values ('#12358','livre1','Jean','2016-06-20',1);
+
+Insert into livres(reference,nomLivre,nomAuteur,datePublication,disponibilite) values ('#1358','livre2','Christophe','2017-07-20',0);
+
+Insert into livres(reference,nomLivre,nomAuteur,datePublication,disponibilite) values ('#1238','livre3','Yann','2017-06-20',0);
+
+
+CREATE TABLE utilisateurs
+(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nom VARCHAR(20) NOT NULL,
+pseudo VARCHAR(100) NOT NULL,
+mdp VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+constraint UC_utilisateurs UNIQUE (pseudo)
+);
+
+
+Insert into utilisateurs (nom,pseudo,mdp,email) values ('admin_root','admin_root','passeroot','admin@infomaniak.com');
+
+
+CREATE TABLE livreproposer
+(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nomLivre VARCHAR(6) NOT NULL,
+nomAuteur VARCHAR(100) NOT NULL,
+datePublication DATE NOT NULL
+);
+
+
+CREATE TABLE livreemprunter
+(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+reference VARCHAR(6) NOT NULL,
+pseudo VARCHAR(100) NOT NULL,
+nomlivre VARCHAR(100) NOT NULL,
+rendu BOOL DEFAULT 1
+);
+
